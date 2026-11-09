@@ -98,9 +98,9 @@ body{background:var(--stage-low);color:var(--hint);font-family:var(--font);overf
       </div>
     </div>
     <div class="hint">
-      <span id="hintText">Tilt your phone, or drag the card</span>
-      <button id="sway" type="button" aria-pressed="true">Auto sway</button>
-      <button id="motion" type="button" hidden>Use phone motion</button>
+      <span id="hintText"></span>
+      <button id="sway" type="button" aria-pressed="true" hidden>Auto sway</button>
+      <button id="motion" type="button" hidden>Allow phone accelerometer</button>
     </div>
   </div>
 </div>
@@ -139,7 +139,7 @@ body{background:var(--stage-low);color:var(--hint);font-family:var(--font);overf
         }
         addEventListener('deviceorientation',onOrient);
         setTimeout(()=>{ if(!motionOn){ motionBtn.hidden=true; hint.textContent='Phone motion is blocked here. Drag the card instead'; } },1500);
-        motionBtn.setAttribute('aria-pressed','true');
+        motionBtn.hidden=true;
       }catch(_){ motionBtn.hidden=true; hint.textContent='Phone motion is blocked here. Drag the card instead'; }
     });
   }
