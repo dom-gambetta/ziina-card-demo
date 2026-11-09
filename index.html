@@ -68,7 +68,7 @@ body{background:var(--stage-low);color:var(--hint);font-family:var(--font);overf
   filter:hue-rotate(calc(var(--tx)*8deg)) brightness(calc(.95 + var(--lit)*.15 + max(var(--boost),0)*.2)) saturate(.85)}
 .logo-shine.edge-iri{background:linear-gradient(110deg,rgba(176,108,255,0) 30%,rgba(176,108,255,.45) 43%,rgba(222,186,255,.6) 50%,rgba(176,108,255,.45) 57%,rgba(176,108,255,0) 70%);
   background-size:280% 100%;opacity:calc(max(var(--lit),0)*.45 + max(var(--boost),0)*.4)}
-.hint{font-size:13px;letter-spacing:.02em;color:var(--hint-dim);text-align:center;display:flex;gap:14px;align-items:center;flex-wrap:wrap;justify-content:center}
+.hint{flex-direction:column;font-size:13px;letter-spacing:.02em;color:var(--hint-dim);text-align:center;display:flex;gap:14px;align-items:center;flex-wrap:wrap;justify-content:center}
 .hint button{font:inherit;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--hint);background:rgba(203,188,245,.08);
   border:1px solid rgba(203,188,245,.22);border-radius:999px;padding:7px 14px;cursor:pointer}
 .hint button[aria-pressed="true"]{background:rgba(203,188,245,.18);border-color:rgba(203,188,245,.45)}
@@ -98,7 +98,7 @@ body{background:var(--stage-low);color:var(--hint);font-family:var(--font);overf
       </div>
     </div>
     <div class="hint">
-      <span id="hintText"></span>
+      <span id="hintText">Tilt your phone, or drag the card</span>
       <button id="sway" type="button" aria-pressed="true" hidden>Auto sway</button>
       <button id="motion" type="button" hidden>Allow phone accelerometer</button>
     </div>
